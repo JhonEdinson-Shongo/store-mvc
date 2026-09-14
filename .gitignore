@@ -1,0 +1,60 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+[xX]64/
+[xX]86/
+[Ww]in32/
+[Aa]rtifacts/
+
+# Visual Studio temporary files, build results, and files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.rsuser
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+*.nuspec
+
+# Dotnet generated files
+project.lock.json
+project.fragment.lock.json
+artifacts/
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
+
+# ASP.NET Core
+appsettings.Development.json
+!appsettings.Development.example.json
+
+# Rider / JetBrains
+.idea/
+*.iml
+
+# Test results
+TestResults/
+*.coverage
+*.coveragexml
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Misc
+*.orig
+*.tmp
+*.temp

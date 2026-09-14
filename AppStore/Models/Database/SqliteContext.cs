@@ -17,8 +17,6 @@ public class SqliteContext : IdentityDbContext<AppUser>
     {
         base.OnModelCreating(modelBuilder);
 
-
-
         modelBuilder.Entity<Libro>()
             .HasMany(l => l.Categorias)
             .WithMany(c => c.Libros)

@@ -1,7 +1,21 @@
+using AppStore.Models.Database;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<SqliteContext>(options =>
+{
+    options.LogTo(
+        Console.WriteLine,
+        [DbLoggerCategory.Database.Command.Name],
+        LogLevel.Information
+    ).EnableSensitiveDataLogging();
+
+    options.UseSqlite(builder.Configuration.GetConnectionString("SqliteDatabase"));
+});
 
 var app = builder.Build();
 
@@ -24,6 +38,6 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
-    
+
 
 app.Run();
